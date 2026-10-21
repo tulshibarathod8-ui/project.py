@@ -1,66 +1,48 @@
 # project.py
 
-print("1. Sandwich")
-print("2. Pizza")
-print("3. Burger")
+print("Welcome to the Pattern Generator and Number Analyzer!")
 
-choice = int(input("Enter your choice (1-3): "))
-             
-match choice:
-    case 1:
-        print("\nSandwich Menu")
-        print("1. Veg Sandwich")
-        print("2. Cheese Sandwich")
-        print("3. Grilled Sandwich")
+while True:
+    print("\nSelect an option: ")
+    print("1. Generate a Pattern")
+    print("2. Analyze a Range of Numbers")
+    print("3. Exit")
 
-        every_choice = int(input("Enter sandwich choice: "))
+    choice = int(input("Enter your choice: "))
 
-        match every_choice:
-            case 1:
-                print("You ordered Veg Sandwich")
-            case 2:
-                print("You ordered Cheese Sandwich")
-            case 3:
-                print("You ordered Grilled Sandwich")
-            case _:
-                print("Invalid sandwich choice")
 
-    case 2:
-        print("\nPizza Menu")
-        print("1. Thin Crust Pizza")
-        print("2. Cheese Burst Pizza")
-        print("3. Fresh Dough Pizza")
+    match choice:
+        case 1:
+            rows = int(input("Enter the number of rows for the pattern: "))
+            if(rows > 0):
+                print("\nPattern:")
 
-        sub_choice = int(input("Enter pizza choice: "))
+                for i in range(1,rows+1):
+                   for j in range(1,i+1):
+                       print("*",end="")
+                   print()
+            else:    
+                print("Error: Number of rows must be positive integer.")   
 
-        match sub_choice:
-            case 1:
-                print("You ordered Thin Crust Pizza")
-            case 2:
-                print("You ordered Cheese Burst Pizza")
-            case 3:
-                print("You ordered Fresh Dough Pizza")
-            case _:
-                print("Invalid pizza choice")
+        case 2:
+            start = int(input("\nEnter the start of range: "))
+            end = int(input("Enter the end of range: "))
+            if(start > end):
+                print("Error: The end of the range must be greater than the start.")
+            else:
+                total_sum = 0
+                for num in range(start,end+1):
+                   if(num % 2 == 0 ):
+                       print("Number",num,"is Even")
+                   else:
+                       print("Number",num,"is Odd")
+                       
+                   total_sum += num
+                print(f"Sum of all numbers from {start} to {end} is: {total_sum}") 
 
-    case 3:
-        print("\nBurger Menu")
-        print("1. Veg Burger")
-        print("2. Cheese Burger")
-        print("3. Double Patty Burger")
+        case 3:
+            print("Exiting the program. Goodbye!")
+            break
 
-        sub_choice = int(input("Enter burger choice: "))
-
-        match sub_choice:
-            case 1:
-                print("You ordered Veg Burger")
-            case 2:
-                print("You ordered Cheese Burger")
-            case 3:
-                print("You ordered Double Patty Burger")
-            case _:
-                print("Invalid burger choice")
-
-    case _:
-        print("Invalid menu choice")
-    
+        case _:
+            print("Error: Invalid choice! Please enter valid choice.")
