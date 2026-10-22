@@ -20,4 +20,4 @@ A Python-based menu-driven application that generates star patterns, identifies 
 
 Here is the sample output of the program:
 
-![Program Output](output.png)  
+![Program Output](OUTPUT.png) 
