@@ -1,48 +1,23 @@
-# project.py
+ #  Pattern Generator and Number Analyzer
 
-print("Welcome to the Pattern Generator and Number Analyzer!")
+##  Project Description
 
-while True:
-    print("\nSelect an option: ")
-    print("1. Generate a Pattern")
-    print("2. Analyze a Range of Numbers")
-    print("3. Exit")
+A Python-based menu-driven application that generates star patterns, identifies even and odd numbers, and calculates the sum of numbers within a given range.
 
-    choice = int(input("Enter your choice: "))
+###  Features
 
+ Pattern Generation: Creates a right-angled triangle star pattern.
 
-    match choice:
-        case 1:
-            rows = int(input("Enter the number of rows for the pattern: "))
-            if(rows > 0):
-                print("\nPattern:")
+ Even and Odd Analysis: Identifies even and odd numbers in a given range.
 
-                for i in range(1,rows+1):
-                   for j in range(1,i+1):
-                       print("*",end="")
-                   print()
-            else:    
-                print("Error: Number of rows must be positive integer.")   
+ Sum Calculation: Calculates the sum of all numbers in the selected range.
 
-        case 2:
-            start = int(input("\nEnter the start of range: "))
-            end = int(input("Enter the end of range: "))
-            if(start > end):
-                print("Error: The end of the range must be greater than the start.")
-            else:
-                total_sum = 0
-                for num in range(start,end+1):
-                   if(num % 2 == 0 ):
-                       print("Number",num,"is Even")
-                   else:
-                       print("Number",num,"is Odd")
-                       
-                   total_sum += num
-                print(f"Sum of all numbers from {start} to {end} is: {total_sum}") 
+ Error Handling: Displays error messages for invalid choices and ranges.
 
-        case 3:
-            print("Exiting the program. Goodbye!")
-            break
+ Exit Option: Allows users to exit the program.
 
-        case _:
-            print("Error: Invalid choice! Please enter valid choice.")
+## 📸 Project Output
+
+Here is the sample output of the program:
+
+![Program Output](output.png)  
