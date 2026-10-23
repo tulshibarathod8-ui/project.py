@@ -1,4 +1,4 @@
-#  Pattern Generator and Number Analyzer
+ #  Pattern Generator and Number Analyzer
 
 ##  Project Description
 
@@ -20,8 +20,7 @@ A Python-based menu-driven application that generates star patterns, identifies 
 
 Here is the sample output of the program:
 
-![Screenshot](Screenshot 2026-10-21 172702.png)  
-
+![Screenshot](output.png)  
 
 
 
