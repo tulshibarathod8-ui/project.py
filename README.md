@@ -16,7 +16,7 @@ A Python-based menu-driven application that generates star patterns, identifies 
 
  Exit Option: Allows users to exit the program.
 
-## 📸 Project Output
+##  Project Output
 
 Here is the sample output of the program:
 
